@@ -18,7 +18,7 @@ async def send_welcome(message: types.Message):
     user_name = message.from_user.username
 
 
-    await message.reply("Assalomu alaykum! Botimizga xush kelibsiz.")
+    await message.reply("Assalomu alaykum! Botimga xush kelibsiz.")
 
 
 @dp.message_handler(commands=['data'])
@@ -28,9 +28,9 @@ async def send_data(message: types.Message):
     user_info = get_user_info(user_id)
 
     if user_info is None:
-        await message.reply("Sizning ma'lumotlaringiz topilmadi.")
+        await message.reply("Sizning malumotlaringiz topilmadi.")
     else:
-        await message.reply(f"Sizning ma'lumotlaringiz: {user_info}")
+        await message.reply(f"Sizning malumotlaringiz: {user_info}")
 
 
 def get_user_info(user_id):
